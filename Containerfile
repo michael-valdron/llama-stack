@@ -40,6 +40,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONIOENCODING=UTF-8 \
     LANG=en_US.UTF-8
 
+RUN mkdir /licenses
+COPY LICENSE /licenses/
+
 COPY --from=builder --chown=1001:1001 /app-root/.venv ./.venv
 
 COPY --chown=1001:1001 ./run.yaml ./scripts/entrypoint.sh ./
