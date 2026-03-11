@@ -41,6 +41,11 @@
       "enabled": false
     },
     {
+      "matchManagers": ["dockerfile"],
+      "matchPackageNames": ["quay.io/lightspeed-core/lightspeed-stack"],
+      "enabled": false
+    },
+    {
       "matchManagers": ["pep621"],
       "matchPackageNames": ["python"],
       "matchUpdateTypes": ["major", "minor"],
